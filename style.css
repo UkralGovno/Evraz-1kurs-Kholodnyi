@@ -1,0 +1,55 @@
+body {
+    background-color: white;
+}
+.card {
+    color: black;
+
+    top: 0;
+    display: inline-block;
+    width: 100px;
+    background-color: darkred;
+    position: absolute;
+}
+.name {
+    color: white;
+    background-color: #4a014a;
+}
+.card2 {
+    color: black;
+
+    right: 0;
+    display: inline-block;
+    width: 200px;
+    background-color: #24a69d;
+    position: absolute;
+}
+.name2 {
+    color: white;
+    background-color: #00127e;
+}
+.card3 {
+    color: black;
+
+    left: 0;
+    display: inline-block;
+    width: 300px;
+    background-color: #36bf56;
+    position: absolute;
+}
+.name3 {
+    color: white;
+    background-color: #0b4708;
+}.card4 {
+    color: black;
+
+    bottom: 0;
+
+    display: inline-block;
+    width: 300px;
+    background-color: #d34545;
+    position: absolute;
+}
+.name4 {
+    color: white;
+    background-color: #48104a;
+}
