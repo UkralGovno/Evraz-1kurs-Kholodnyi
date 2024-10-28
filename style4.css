@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: #494949;
 }
 .card {
     color: black;
@@ -7,13 +7,17 @@ body {
     top: 0;
     left: 0;
     display: inline-block;
-    width: auto;
     background-color: darkred;
+    height: 50%;
+    width: 50%;
     position: absolute;
 }
 .name {
     color: white;
     background-color: #4a014a;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 .card2 {
     color: black;
@@ -21,13 +25,17 @@ body {
     right: 0;
     top: 0;
     display: inline-block;
-    width: 200px;
+    height: 50%;
+    width: 50%;
     background-color: #24a69d;
     position: absolute;
 }
 .name2 {
     color: white;
     background-color: #00127e;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 .card3 {
     color: black;
@@ -35,24 +43,32 @@ body {
     left: 0;
     bottom: 0;
     display: inline-block;
-    width: 300px;
+    height: 50%;
+    width: 50%;
     background-color: #36bf56;
     position: absolute;
 }
 .name3 {
     color: white;
     background-color: #0b4708;
-}.card4 {
-    color: black;
-
+    position: absolute;
     bottom: 0;
     right: 0;
-    display: inline-block;
-    width: 300px;
-    background-color: #d34545;
-    position: absolute;
-}
+}.card4 {
+     color: black;
+
+     bottom: 0;
+     right: 0;
+     display: inline-block;
+     height: 50%;
+     width: 50%;
+     background-color: #d34545;
+     position: absolute;
+ }
 .name4 {
     color: white;
     background-color: #48104a;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
