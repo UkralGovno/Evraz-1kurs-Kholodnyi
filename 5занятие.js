@@ -1,2 +1,2 @@
-let span = document.getElementById( elementID: 'answer');
+let span = document.getElementById('answer');
 span.innerText = 5;
