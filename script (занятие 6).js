@@ -53,9 +53,9 @@ const clear = () => {
     sportDOM.innerText = '';
     subjectDOM.innerText = '';
     colorDOM.innerText = '';
+    document.getElementById('body').style = 'background-color: white';
 };
 button.addEventListener('click', clear);
-
 
 
 
