@@ -4,13 +4,13 @@ function clearDiv () {
 }
 function makeRed () {
     let div = document.getElementById('sdf');
-    body.style.backgroundColor = 'red';
+    sdf.style.backgroundColor = 'red';
 }
 function makeGreen () {
     let div = document.getElementById('sdf');
-    body.style.backgroundColor = 'green';
+    sdf.style.backgroundColor = 'green';
 }
 function makeBlue () {
     let div = document.getElementById('sdf');
-    body.style.backgroundColor = 'blue';
+    sdf.style.backgroundColor = 'blue';
 }
