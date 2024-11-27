@@ -1,0 +1,116 @@
+h1{
+    text-align: center;
+}
+#img1{
+
+    font-size: 50px;
+    background: url("https://steamuserimages-a.akamaihd.net/ugc/1699533845886379118/8E63FD0A470B9C1899A44FEF257CA92E08DE969B/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+    height: 1080px;
+    width: 1920px;
+}
+#div1{
+    height: 100px;
+}
+#div2{
+    border-top: 3px solid #32a1ce;
+}
+#span1{
+    padding-left: 100px;
+}
+#span2{
+    padding-left: 400px;
+    font-size: 30px;
+}
+#span3{
+    padding-left: 100px;
+    font-size: 30px;
+}
+#span4{
+    padding-left: 100px;
+    font-size: 30px;
+}
+#span5{
+    padding-left: 100px;
+    font-size: 30px;
+}
+#span6{
+    padding-left: 100px;
+    font-size: 30px;
+}
+h2{
+    font-size: 40px;
+}
+
+#div10{
+    width: 100%;
+}
+
+#div3{
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 50%;
+}
+#div4{
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 50%;
+}
+#div5{
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 50%;
+}
+#div6{
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 50%;
+}
+#div7{
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 50%;
+}
+#div8{
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 50%;
+}
+#div12{
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 25%;
+}
+#div13{
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 25%;
+}
+#div14{
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 25%;
+}
+#div15{
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 25%;
+}
+p{
+    font-size: 20px;
+}
+#div16{
+    float: left;
+    height: 500px;
+    width: 100%;
+    background-color: darkred;
+}
