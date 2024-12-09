@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16</title>
+    <style>
+        #button1.red button {
+            background-color: red;
+        }
+        #button1.green button {
+            background-color: green;
+        }
+        #button1.blue button {
+            background-color: blue;
+        }
+        #button2.red button {
+            background-color: red;
+        }
+        #button2.green button {
+            background-color: green;
+        }
+        #button2.blue button {
+            background-color: blue;
+        }
+        button {
+            border-radius: 15px 15px 15px 15px;
+        }
+
+    </style>
+</head>
+<body>
+<button style="color: red" onclick="makeRed()">Выбрать красный блок</button>
+<button style="color: green" onclick="makeGreen()">Выбрать зеленый блок</button>
+<button style="color: blue" onclick="makeBlue()">Выбрать синий блок</button>
+<div></div>
+<div style="display: inline">Текущий шаг </div>
+<div style="display: inline-block" id="div1"></div>
+
+<div id="button1" class="" style="display: inline-block">
+    <button onclick="Plus1()">+1</button>
+    <button onclick="Plus5()">+5</button>
+    <button onclick="Plus10()">+10</button>
+    <button onclick="Plus50()">+50</button>
+
+    <button onclick="Minus1()">-1</button>
+    <button onclick="Minus5()">-5</button>
+    <button onclick="Minus10()">-10</button>
+    <button onclick="Minus50()">-50</button>
+</div>
+
+<div></div>
+<div  id="button2" class="">
+    <button>Передвинуть блок влево</button>
+    <button>Передвинуть блок вправо</button>
+    <button>Передвинуть блок вверх</button>
+    <button>Передвинуть блок вниз</button>
+</div>
+
+
+<script src="11%20занятие.js"></script>
+</body>
+</html>

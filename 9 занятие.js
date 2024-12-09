@@ -1,4 +1,5 @@
-let div2 = document.getElementById('div2');
+let div1 = document.getElementById('div2');
+let div2 = 0;
 
 
 function makeBlack(){
@@ -26,47 +27,45 @@ function makeYellow(){
     document.getElementById('body').style.color = 'black';
 }
 function makeZero(){
-    let div2 = document.getElementById('div2');
-    div2.innerHTML = 0;
+    div2 = 0;
     Sravneniye()
 }
 function makeOne(){
-    let div2 = document.getElementById('div2');
-    div2.innerHTML = 1;
+    div2 = 1;
     Sravneniye()
 }
 function makeTwo(){
-    let div2 = document.getElementById('div2');
-    div2.innerHTML = 2;
+    div2 = 2;
     Sravneniye()
 }
 function makeFive(){
-    let div2 = document.getElementById('div2');
-    div2.innerHTML = 5;
+    div2 = 5;
     Sravneniye()
 }
 function makeNmbPlusOne(){
-    let div2 = document.getElementById('div2');
-    div2.innerHTML = Number(div2.innerText) + 1;
+    div2 = div2 + 1;
     Sravneniye()
 }
 function makeNmbMinusOne(){
-    let div2 = document.getElementById('div2');
-    div2.innerHTML = Number(div2.innerText) - 1;
+    div2 = div2 - 1;
     Sravneniye()
 }
 
+
 function Sravneniye() {
-    if (div2.innerText == 0) {
+    if (div2 == 0) {
         makeBlack()
-    } else if (div2.innerText == 1) {
+    } else if (div2 == 1) {
         makeWhite()
-    } else if (div2.innerText == 5) {
+    } else if (div2 == 2) {
+        makeBlue()
+    } else if (div2 == 5) {
         makeGreen()
-    } else if (div2.innerText % 2 == 0) {
+    } else if (div2 % 2 == 0) {
         makeRed()
     } else {
         makeYellow()
     }
-
+    div1.innerText = div2
 }
+
