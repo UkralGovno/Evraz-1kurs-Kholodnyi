@@ -32,6 +32,7 @@
 <button style="color: red" onclick="makeRed()">Выбрать красный блок</button>
 <button style="color: green" onclick="makeGreen()">Выбрать зеленый блок</button>
 <button style="color: blue" onclick="makeBlue()">Выбрать синий блок</button>
+<button onclick="location.reload()">Сбросить</button>
 <div></div>
 <div style="display: inline">Текущий шаг </div>
 <div style="display: inline-block" id="div1"></div>
@@ -50,11 +51,16 @@
 
 <div></div>
 <div  id="button2" class="">
-    <button>Передвинуть блок влево</button>
-    <button>Передвинуть блок вправо</button>
-    <button>Передвинуть блок вверх</button>
-    <button>Передвинуть блок вниз</button>
+    <button id="left" onclick="BlockLeft()">Передвинуть блок влево</button>
+    <button id="right" onclick="BlockRight()">Передвинуть блок вправо</button>
+    <button id="up" onclick="BlockUp()">Передвинуть блок вверх</button>
+    <button id="down"  onclick="BlockDown()">Передвинуть блок вниз</button>
 </div>
+<div style="height: 77px;"></div>
+
+<div style="background-color: red; height: 200px; width: 200px; display: inline-block; position: absolute;" id="block1"></div>
+<div style="background-color: green; height: 200px; width: 200px; display: inline-block; left: 300px; position: absolute" id="block2"></div>
+<div style="background-color: blue; height: 200px; width: 200px; display: inline-block; left: 615px; position: absolute" id="block3"></div>
 
 
 <script src="11%20занятие.js"></script>
