@@ -25,10 +25,67 @@
         button {
             border-radius: 15px 15px 15px 15px;
         }
+        #block1.normal {
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+
+        }
+        #block1.border_l div{
+            border-left: yellow;
+        }
+        #block1.border_r div{
+            border-right: yellow;
+        }
+        #block1.border_t div{
+            border-top: yellow;
+        }
+        #block1.border_b div{
+            border-bottom: yellow;
+        }
+        #block2.normal div{
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+
+        }
+        #block2.border_l div{
+            border-left: yellow;
+        }
+        #block2.border_r div{
+            border-right: yellow;
+        }
+        #block2.border_t div{
+            border-top: yellow;
+        }
+        #block2.border_b div{
+            border-bottom: yellow;
+        }
+        #block3.normal div{
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+
+        }
+        #block3.border_l div{
+            border-left: yellow;
+        }
+        #block3.border_r div{
+            border-right: yellow;
+        }
+        #block3.border_t div{
+            border-top: yellow;
+        }
+        #block3.border_b div{
+            border-bottom: yellow;
+        }
 
     </style>
 </head>
-<body>
+<body style="overflow: hidden">
 <button style="color: red" onclick="makeRed()">Выбрать красный блок</button>
 <button style="color: green" onclick="makeGreen()">Выбрать зеленый блок</button>
 <button style="color: blue" onclick="makeBlue()">Выбрать синий блок</button>
@@ -58,9 +115,9 @@
 </div>
 <div style="height: 77px;"></div>
 
-<div style="background-color: red; height: 200px; width: 200px; display: inline-block; position: absolute;" id="block1"></div>
-<div style="background-color: green; height: 200px; width: 200px; display: inline-block; left: 300px; position: absolute" id="block2"></div>
-<div style="background-color: blue; height: 200px; width: 200px; display: inline-block; left: 615px; position: absolute" id="block3"></div>
+<div style="background-color: red; height: 200px; width: 200px; display: inline-block; position: absolute;" id="block1" class="normal"></div>
+<div style="background-color: green; height: 200px; width: 200px; display: inline-block; left: 300px; position: absolute" id="block2" class="normal"></div>
+<div style="background-color: blue; height: 200px; width: 200px; display: inline-block; left: 615px; position: absolute" id="block3" class="normal"></div>
 
 
 <script src="11%20занятие.js"></script>

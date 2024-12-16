@@ -88,14 +88,32 @@ function BlockLeft(){
     else if (c === 'red') {
         console.log(block1.style.left, block1.offsetLeft, block1.offsetLeft - step + 'px');
         block1.style.left = block1.offsetLeft - step + 'px';
+        //console.log(block1.style.left)
+        let left0 = parseInt(block1.style.left)
+        while (left0 <= 0) {
+            block1.style.left = 0;
+            block1.classList.remove('normal');
+            block1.classList.add('border_l');
+        };
+        block1.classList.remove('border_l');
+        block1.classList.add('normal');
     }
+
     else if (c === 'green') {
         console.log(block2.style.left, block2.offsetLeft, block2.offsetLeft - step + 'px');
         block2.style.left = block2.offsetLeft - step + 'px';
+        let left0 = parseInt(block2.style.left)
+        if (left0 <= 0) {
+            block2.style.left = 0;
+        };
     }
     else if (c === 'blue') {
         console.log(block3.style.left, block3.offsetLeft, block3.offsetLeft - step + 'px');
         block3.style.left = block3.offsetLeft - step + 'px';
+        let left0 = parseInt(block3.style.left)
+        if (left0 <= 0) {
+            block3.style.left = 0;
+        };
     }
 }
 function BlockRight(){
@@ -105,14 +123,26 @@ function BlockRight(){
     else if (c === 'red') {
         console.log(block1.style.left, block1.offsetLeft, block1.offsetLeft + step + 'px');
         block1.style.left = block1.offsetLeft + step + 'px';
+        let right0 = parseInt(block1.style.right)
+        if (right0 <= 0) {
+            block1.style.right = 0;
+        };
     }
     else if (c === 'green') {
         console.log(block2.style.left, block2.offsetLeft, block2.offsetLeft + step + 'px');
         block2.style.left = block2.offsetLeft + step + 'px';
+        let right0 = parseInt(block2.style.right)
+        if (right0 <= 0) {
+            block2.style.right = 0;
+        };
     }
     else if (c === 'blue') {
         console.log(block3.style.left, block3.offsetLeft, block3.offsetLeft + step + 'px');
         block3.style.left = block3.offsetLeft + step + 'px';
+        let right0 = parseInt(block3.style.right)
+        if (right0 <= 0) {
+            block3.style.right = 0;
+        };
     }
 }
 function BlockUp(){
@@ -122,14 +152,26 @@ function BlockUp(){
     else if (c === 'red') {
         console.log(block1.style.top, block1.offsetTop, block1.offsetTop - step + 'px');
         block1.style.top = block1.offsetTop - step + 'px';
+        let top0 = parseInt(block1.style.top)
+        if (top0 <= 0) {
+            block1.style.top = 0;
+        };
     }
     else if (c === 'green') {
         console.log(block2.style.top, block2.offsetTop, block2.offsetTop - step + 'px');
         block2.style.top = block2.offsetTop - step + 'px';
+        let top0 = parseInt(block2.style.top)
+        if (top0 <= 0) {
+            block2.style.top = 0;
+        };
     }
     else if (c === 'blue') {
         console.log(block3.style.top, block3.offsetTop, block3.offsetTop - step + 'px');
         block3.style.top = block3.offsetTop - step + 'px';
+        let top0 = parseInt(block3.style.top)
+        if (top0 <= 0) {
+            block3.style.top = 0;
+        };
     }
 }
 function BlockDown(){
@@ -139,14 +181,27 @@ function BlockDown(){
     else if (c === 'red') {
         console.log(block1.style.top, block1.offsetTop, block1.offsetTop + step + 'px');
         block1.style.top = block1.offsetTop + step + 'px';
+        let bottom0 = parseInt(block1.style.bottom)
+        if (bottom0 <= 0) {
+            block1.style.bottom =  0;
+        };
     }
     else if (c === 'green') {
         console.log(block2.style.top, block2.offsetTop, block2.offsetTop + step + 'px');
         block2.style.top = block2.offsetTop + step + 'px';
+        let bottom0 = parseInt(block2.style.bottom)
+        if (bottom0 <= 0) {
+            block1.style.bottom = 0;
+        };
     }
     else if (c === 'blue') {
         console.log(block3.style.top, block3.offsetTop, block3.offsetTop + step + 'px');
         block3.style.top = block3.offsetTop + step + 'px';
-
+        let bottom0 = parseInt(block3.style.bottom)
+        if (bottom0 <= 0) {
+            block1.style.bottom = 0;
+        };
     }
 }
+
+
