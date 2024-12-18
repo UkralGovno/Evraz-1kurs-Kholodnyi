@@ -14,6 +14,10 @@ let downButton = document.querySelector('#down');
 let leftButton = document.querySelector('#left');
 let rightButton = document.querySelector('#right');
 
+let left0 = parseInt(block1.style.left)
+let right0 = parseInt(block1.style.right)
+let top0 = parseInt(block1.style.top)
+let bottom0 = parseInt(block1.style.bottom)
 
 function makeRed(){
     button1.classList.add('red')
@@ -88,32 +92,45 @@ function BlockLeft(){
     else if (c === 'red') {
         console.log(block1.style.left, block1.offsetLeft, block1.offsetLeft - step + 'px');
         block1.style.left = block1.offsetLeft - step + 'px';
-        //console.log(block1.style.left)
-        let left0 = parseInt(block1.style.left)
-        while (left0 <= 0) {
+        left0 = parseInt(block1.style.left)
+        right0 = parseInt(block1.style.right)
+        if (left0 <= 0) {
             block1.style.left = 0;
-            block1.classList.remove('normal');
-            block1.classList.add('border_l');
-        };
-        block1.classList.remove('border_l');
-        block1.classList.add('normal');
+            block1.classList.remove('normal1');
+            block1.classList.add('border_l1');
+        }
+        if (right0 >= 1) {
+            block1.classList.remove('border_r1');
+        }
     }
 
     else if (c === 'green') {
         console.log(block2.style.left, block2.offsetLeft, block2.offsetLeft - step + 'px');
         block2.style.left = block2.offsetLeft - step + 'px';
-        let left0 = parseInt(block2.style.left)
+        left0 = parseInt(block2.style.left)
+        right0 = parseInt(block2.style.right)
         if (left0 <= 0) {
             block2.style.left = 0;
-        };
+            block2.classList.remove('normal2');
+            block2.classList.add('border_l2');
+        }
+        if (right0 >= 1) {
+            block2.classList.remove('border_r2');
+        }
     }
     else if (c === 'blue') {
         console.log(block3.style.left, block3.offsetLeft, block3.offsetLeft - step + 'px');
         block3.style.left = block3.offsetLeft - step + 'px';
-        let left0 = parseInt(block3.style.left)
-        if (left0 <= 0) {
+        left0 = parseInt(block3.style.left)
+        right0 = parseInt(block3.style.right)
+        if (left0 < 0) {
             block3.style.left = 0;
-        };
+            block3.classList.remove('normal3');
+            block3.classList.add('border_l3');
+        }
+        if (right0 >= 1) {
+            block3.classList.remove('border_r3');
+        }
     }
 }
 function BlockRight(){
@@ -123,26 +140,44 @@ function BlockRight(){
     else if (c === 'red') {
         console.log(block1.style.left, block1.offsetLeft, block1.offsetLeft + step + 'px');
         block1.style.left = block1.offsetLeft + step + 'px';
-        let right0 = parseInt(block1.style.right)
+        right0 = parseInt(block1.style.right)
+        left0 = parseInt(block1.style.left)
         if (right0 <= 0) {
             block1.style.right = 0;
-        };
+            block1.classList.remove('normal1');
+            block1.classList.add('border_r1');
+        }
+        if (left0 >= 1) {
+            block1.classList.remove('border_l1');
+        }
     }
     else if (c === 'green') {
         console.log(block2.style.left, block2.offsetLeft, block2.offsetLeft + step + 'px');
         block2.style.left = block2.offsetLeft + step + 'px';
-        let right0 = parseInt(block2.style.right)
+        right0 = parseInt(block2.style.right)
+        left0 = parseInt(block2.style.left)
         if (right0 <= 0) {
             block2.style.right = 0;
-        };
+            block2.classList.remove('normal2');
+            block2.classList.add('border_r2');
+        }
+        if (left0 >= 1) {
+            block2.classList.remove('border_l2');
+        }
     }
     else if (c === 'blue') {
         console.log(block3.style.left, block3.offsetLeft, block3.offsetLeft + step + 'px');
         block3.style.left = block3.offsetLeft + step + 'px';
-        let right0 = parseInt(block3.style.right)
+        right0 = parseInt(block3.style.right)
+        left0 = parseInt(block3.style.left)
         if (right0 <= 0) {
             block3.style.right = 0;
-        };
+            block3.classList.remove('normal3');
+            block3.classList.add('border_r3');
+        }
+        if (left0 >= 1) {
+            block3.classList.remove('border_l3');
+        }
     }
 }
 function BlockUp(){
@@ -152,26 +187,44 @@ function BlockUp(){
     else if (c === 'red') {
         console.log(block1.style.top, block1.offsetTop, block1.offsetTop - step + 'px');
         block1.style.top = block1.offsetTop - step + 'px';
-        let top0 = parseInt(block1.style.top)
+        top0 = parseInt(block1.style.top)
+        bottom0 = parseInt(block1.style.bottom)
         if (top0 <= 0) {
             block1.style.top = 0;
-        };
+            block1.classList.remove('normal1');
+            block1.classList.add('border_t1');
+        }
+        if (bottom0 >= 1) {
+            block1.classList.remove('border_t1');
+        }
     }
     else if (c === 'green') {
         console.log(block2.style.top, block2.offsetTop, block2.offsetTop - step + 'px');
         block2.style.top = block2.offsetTop - step + 'px';
-        let top0 = parseInt(block2.style.top)
+        top0 = parseInt(block2.style.top)
+        bottom0 = parseInt(block2.style.bottom)
         if (top0 <= 0) {
             block2.style.top = 0;
-        };
+            block2.classList.remove('normal2');
+            block2.classList.add('border_t2');
+        }
+        if (bottom0 >= 1) {
+            block2.classList.remove('border_t2');
+        }
     }
     else if (c === 'blue') {
         console.log(block3.style.top, block3.offsetTop, block3.offsetTop - step + 'px');
         block3.style.top = block3.offsetTop - step + 'px';
-        let top0 = parseInt(block3.style.top)
+        top0 = parseInt(block3.style.top)
+        bottom0 = parseInt(block3.style.bottom)
         if (top0 <= 0) {
             block3.style.top = 0;
-        };
+            block3.classList.remove('normal3');
+            block3.classList.add('border_t3');
+        }
+        if (bottom0 >= 1) {
+            block3.classList.remove('border_t3');
+        }
     }
 }
 function BlockDown(){
@@ -181,27 +234,44 @@ function BlockDown(){
     else if (c === 'red') {
         console.log(block1.style.top, block1.offsetTop, block1.offsetTop + step + 'px');
         block1.style.top = block1.offsetTop + step + 'px';
-        let bottom0 = parseInt(block1.style.bottom)
+        bottom0 = parseInt(block1.style.bottom)
+        top0 = parseInt(block1.style.top)
         if (bottom0 <= 0) {
-            block1.style.bottom =  0;
-        };
+            block1.style.bottom = 0;
+            block1.classList.remove('normal1');
+            block1.classList.add('border_b1');
+        }
+        if (top0 >= 1) {
+            block1.classList.remove('border_b1');
+        }
     }
     else if (c === 'green') {
         console.log(block2.style.top, block2.offsetTop, block2.offsetTop + step + 'px');
         block2.style.top = block2.offsetTop + step + 'px';
-        let bottom0 = parseInt(block2.style.bottom)
+        bottom0 = parseInt(block2.style.bottom)
+        top0 = parseInt(block2.style.top)
         if (bottom0 <= 0) {
-            block1.style.bottom = 0;
-        };
+            block2.style.bottom = 0;
+            block2.classList.remove('normal2');
+            block2.classList.add('border_b2');
+        }
+        if (top0 >= 1) {
+            block2.classList.remove('border_b2');
+        }
     }
     else if (c === 'blue') {
         console.log(block3.style.top, block3.offsetTop, block3.offsetTop + step + 'px');
         block3.style.top = block3.offsetTop + step + 'px';
-        let bottom0 = parseInt(block3.style.bottom)
+        bottom0 = parseInt(block3.style.bottom)
+        top0 = parseInt(block3.style.top)
         if (bottom0 <= 0) {
-            block1.style.bottom = 0;
-        };
+            block3.style.bottom = 0;
+            block3.classList.remove('normal3');
+            block3.classList.add('border_b3');
+        }
+        if (top0 >= 1) {
+            block3.classList.remove('border_b3');
+        }
     }
 }
-
 
