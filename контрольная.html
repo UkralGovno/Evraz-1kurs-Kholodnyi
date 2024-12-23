@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="body">
+
+<div id="button1">
+    <button onclick="makeWhite()" style="background-color: white; color: black">Фон белый, кнопки белые с чёрным текстом</button>
+    <div></div>
+    <button onclick="makeBlack()" style="background-color: black; color: white">Фон чёрный, кнопки серые с чёрным текстом</button>
+    <div></div>
+    <button onclick="makeGray()" style="background-color: gray; color: white">Фон серый, кнопки чёрные с белым текстом</button>
+    <div></div>
+    <button onclick="makeGold()" style="background-color: gold; color: black">Фон жёлтый, кнопки синие с золотым текстом</button>
+    <div></div>
+    <button onclick="makeBlue()" style="background-color: blue; color: gold">Фон синий, кнопки золотые с синим текстом</button>
+</div>
+
+<div style="height: 35px"></div>
+
+<div>
+    <button onclick="Minus10(); History()" id="div_b1">Уменьшить на 10</button>
+    <button onclick="Minus1(); History()" id="div_b2">Уменьшить на 1</button>
+    <button onclick="Plus1(); History()" id="div_b3">Увеличить на 1</button>
+    <button onclick="Plus10(); History()" id="div_b4">Увеличить на 10</button>
+    <div style="font-size: 30px;">Текущее число: </div>
+    <div style="font-size: 30px;" id="div1"></div>
+    <button onclick="ChangeNumber(); History()" id="div_b5">Изменить число на своё</button>
+</div>
+
+<div >
+    <div style="display: inline-block">Число чётное?</div>
+    <div style="display: inline-block" id="div_n1">-</div>
+    <div></div>
+    <div style="display: inline-block">Число делиться на 3 без остатка?</div>
+    <div style="display: inline-block" id="div_n2">-</div>
+    <div></div>
+    <div style="display: inline-block">Число делиться на 5 без остатка?</div>
+    <div style="display: inline-block" id="div_n3">-</div>
+    <div></div>
+    <div style="display: inline-block">Число делиться на 7 без остатка?</div>
+    <div style="display: inline-block" id="div_n4">-</div>
+</div>
+
+<hr>
+<div>История чётных чисел: </div>
+<div id="div2">| </div>
+<hr>
+<div>История чисел делящихся на 3 без остатка: </div>
+<div id="div3">| </div>
+<hr>
+<div>История чисел делящихся на 5 без остатка: </div>
+<div id="div4">| </div>
+<hr>
+<div>История чисел делящихся на 7 без остатка: </div>
+<div id="div5">| </div>
+<hr>
+<div>История остальных чисел</div>
+<div id="div6">| </div>
+
+<script src="контрольная.js"></script>
+</body>
+</html>
