@@ -1,46 +1,88 @@
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <link-->
+<!--            rel="stylesheet"-->
+<!--            href="6-вёрстка.css"-->
+<!--    >-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;шапка сайта&ndash;&gt;-->
+<!--<div class="head">-->
+<!--    <div class="head-top">-->
+<!--        <h1 class="head-top-logo">BLOOM</h1>-->
+
+<!--        <div class="head-top-links">-->
+<!--            <div class="link">-->
+<!--                <a href="">HOME</a>-->
+<!--            </div>-->
+<!--            <div class="link">-->
+<!--                <a href="">ABOUT</a>-->
+<!--            </div>-->
+<!--            <div class="link">-->
+<!--                <a href="">WORK</a>-->
+<!--            </div>-->
+<!--            <div class="link">-->
+<!--                <a href="">SERVICES</a>-->
+<!--            </div>-->
+<!--            <div class="link">-->
+<!--                <a href="">CONTACT</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="head-bottom">-->
+<!--        <div class="head-bottom-text">-->
+<!--            <h1>WE ARE BLOOM</h1>-->
+<!--            <div>We do digital & we do it with a difference</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;2 блок&ndash;&gt;-->
+<!--<div></div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link
-            rel="stylesheet"
-            href="6-вёрстка.css"
-    >
+    <style>
+
+    </style>
+    <script>
+        let i = 4;
+        function addLi(){
+            let addElement = document.getElementById('add')
+            let input = document.getElementById('name')
+            let liElement = document.createElement('li')
+
+            if (input.value === '') {
+                alert('Добваить значение')
+            } else {
+
+                liElement.innerText = i
+                if (i % 2 === 0) {
+                    liElement.classList.add('chet')
+                } else {liElement.classList.add('nechet') }
+
+
+                addElement.append(liElement)
+                input.value = ''
+
+            }
+
+        }
+    </script>
+    <title>123</title>
 </head>
 <body>
-<!--шапка сайта-->
-<div class="head">
-    <div class="head-top">
-        <h1 class="head-top-logo">BLOOM</h1>
-
-        <div class="head-top-links">
-            <div class="link">
-                <a href="">HOME</a>
-            </div>
-            <div class="link">
-                <a href="">ABOUT</a>
-            </div>
-            <div class="link">
-                <a href="">WORK</a>
-            </div>
-            <div class="link">
-                <a href="">SERVICES</a>
-            </div>
-            <div class="link">
-                <a href="">CONTACT</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="head-bottom">
-        <div class="head-bottom-text">
-            <h1>WE ARE BLOOM</h1>
-            <div>We do digital & we do it with a difference</div>
-        </div>
-    </div>
-</div>
-
-<!--2 блок-->
-<div></div>
+    <button onclick="addLi()">Dobavit</button>
+    <ol class="li">
+        <li class="nechet">1</li>
+        <li class="chet">2</li>
+        <li class="nechet">3</li>
+    </ol>
 </body>
 </html>
