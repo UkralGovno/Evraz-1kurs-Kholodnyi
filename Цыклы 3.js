@@ -4,29 +4,35 @@
 function AddDiv1(){
     let addElement = document.getElementById('add')
     let divElement = document.createElement('div')
+    divElement.classList.add('red')
     addElement.append(divElement)
 
-    document.getElementById('add').classList.add = 'red'
-
-    document.getElementsByClassName('red').style.backgroundColor = 'red';
 
 }
 function AddDiv2(){
     let addElement = document.getElementById('add')
     let divElement = document.createElement('div')
+    divElement.classList.add('green')
     addElement.append(divElement)
 
-    document.getElementById('add').classList.add = 'green'
 
-    document.getElementsByClassName('green').style.backgroundColor = 'green';
+}
+function AddDiv3(){
+    let addElement = document.getElementById('add')
+    let divElement = document.createElement('div')
+    divElement.classList.add('blue')
+    addElement.append(divElement)
+
 
 }
 
 
-function MakePrompt () {
-    let a = prompt('1-Красный 2-Зеленый 3-Синий 4-Стоп')
 
-    while (a === '4') {
+function MakePrompt () {
+    let a = 0;
+
+    while (a !== '4') {
+        a = prompt('1-Красный 2-Зеленый 3-Синий 4-Стоп')
         if (a === '1') {
             AddDiv1()
         } else if (a === '2') {
@@ -35,6 +41,7 @@ function MakePrompt () {
             AddDiv3()
         } else {
             alert('Значение не задано')
+
         }
     }
 
