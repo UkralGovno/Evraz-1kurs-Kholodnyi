@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        p {
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 <input id="input">
@@ -11,9 +16,9 @@
 <h1>Добавленные элименты</h1>
 <div id="div1"></div>
 
-<button>Создать нумерованный список</button>
-<button>Создать маркерованный список</button>
-<button>Очистить список</button>
+<button onclick="createListOl()">Создать нумерованный список</button>
+<button onclick="createListUl()">Создать маркерованный список</button>
+<button onclick="clearList()">Очистить список</button>
 
 <div id="div2">
 
