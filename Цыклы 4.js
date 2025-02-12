@@ -1,44 +1,60 @@
-let i = 0
+let c = 0
+let a = []
+// console.log(a.length)
+
 
 function AddElement() {
     let input = document.getElementById('input')
-    let div1 = document.getElementById('div1');
+    a.push(input.value)
 
     if (input.value === '') {
         alert('Введите текст')
     } else {
-        if (i === 0) {
+        if (c === 0) {
             let addElement = document.getElementById('div1')
-            let pElement = document.createElement('p')
+            let pElement = document.createElement('span')
             addElement.append(pElement)
-            pElement.innerText = input.value
-            i = i + 1
+            pElement.innerText = a[c] + ' '
         } else {
             let addElement = document.getElementById('div1')
-            let pElement = document.createElement('p')
+            let pElement = document.createElement('span')
             addElement.append(pElement)
-            pElement.innerText = ', ' + input.value
+            pElement.innerText = a[c] + ' '
         }
+        c = c + 1
     }
 }
 
 function createListOl(){
     let div2 = document.getElementById('div2');
-    for (let i = 0; i < ; i++) {
-
-        let olElement = document.createElement('ol');
-
-
+    let olElement = document.createElement('ol');
+    for (let i = 0; i < c; i++) {
         let liElement = document.createElement('li');
-        liElement.innerText = div1.innerText;
+        liElement.innerText = a[i];
+        olElement.append(liElement)
     }
-
+    div2.append(olElement)
 }
+
+function createListUl(){
+    let div2 = document.getElementById('div2');
+    let ulElement = document.createElement('ul');
+    for (let i = 0; i < c; i++) {
+        let liElement = document.createElement('li');
+        liElement.innerText = a[i];
+        ulElement.append(liElement)
+    }
+    div2.append(ulElement)
+}
+
 
 
 function clearList() {
     let div2 = document.getElementById('div2');
+    let div1 = document.getElementById('div1')
     div2.innerText = ''
+    div1.innerText = ''
+
 }
 
 
