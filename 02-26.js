@@ -35,7 +35,7 @@ let specialsObj = {
     'fragile': 'Хрупкое',
 };
 
-function discount(item) {
+function discount2(item) {
     let field = document.getElementById('discountDom');
 
     if (item) {
@@ -122,7 +122,7 @@ function addTovarCard(tovar, index) {
             </div>
             <div class="">Спооб оплаты: ${ tovar.sposoboplati }</div>
             <div class="tovar-punktvidachi">Пункт выдачи: ${ tovar.punktvidachi }</div>
-            <div class="tovar-close">X</div>
+            <div class="tovar-close" onclick="clearList()">X</div>
             <div class="tovar-edit">
                 <button onclick="edit(${ index })">Редактировать</button>
             </div>`;
@@ -150,6 +150,8 @@ function edit(productIndex) {
     inputDescription.value = product.description;
     inputPunktvidachi.value = product.punktvidachi;
     selectCategory.value = product.category;
+    selectColor.value = product.color;
+    inputSposoboplati.value = product.sposoboplati;
 
     // ищем нужный инпут радио с нужным value значением, чтобы его отметить как выбранный
     let radio = document.querySelector(`input[name=discount][value=${ product.discountChoose }]`);
@@ -165,7 +167,23 @@ function edit(productIndex) {
             checkbox.checked = true;
         }
     }
+
+    let radio1 = document.querySelector(`input[name=sposoboplati][value=${ product.sposoboplati }]`);
+    if (radio1) {
+        radio1.checked = true;
+    }
+
+    for (let i = 0; i < product.specials.length; i++) {
+        // ищем нужный инпут чекбокс с нужным value значением, чтобы его отметить как выбранный
+        let specialValue1 = product.specials[i];
+        let checkbox1 = document.querySelector(`input[name=sposoboplati][value=${ specialValue1 }]`);
+        if (checkbox1) {
+            checkbox1.checked = true;
+        }
+    }
 }
+
+
 
 // обновление товара в массиве товаров после его редактирования
 function editTovar() {
@@ -180,6 +198,7 @@ function editTovar() {
 
     // находим активный радио-инпут, который выбран
     let discountChoose = document.querySelector('input[name=discount]:checked');
+    let sposoboplatiChoose= document.querySelector('input[name=sposoboplati]:checked');
 
     // достаем все чекбоксы особенностей и генерируем текст
     let specialsValues = [];
@@ -191,6 +210,7 @@ function editTovar() {
 
     product.name = inputName.value;
     product.category = selectCategory.value;
+    product.color = selectColor.value;
     product.specials = specialsValues;
     product.description = inputDescription.value;
     product.punktvidachi = inputPunktvidachi.value;
@@ -198,6 +218,8 @@ function editTovar() {
     product.discount = inputDiscount.value;
     product.price = inputPrice.value;
     product.count = inputCount.value;
+    product.sposoboplati = sposoboplatiChoose.value;
+
 
     event.preventDefault();
     form.reset();
@@ -213,4 +235,16 @@ function buildAgain() {
         let product = products[i];
         addTovarCard(product, i)
     }
+}
+
+function clearList (productIndex) {
+
+    listDOM.innerText = '';
+
+    for (let i = 0; i < products.length; i++) {
+        let product = '';
+        addTovarCard(product, i)
+    }
+
+    buildAgain();
 }
