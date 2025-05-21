@@ -53,3 +53,95 @@ function function1() {
 
 }
 
+let div_a = document.getElementById('div_a')
+let div_a1 = document.getElementById('div_a1')
+let div_a2 = document.getElementById('div_a2')
+let div_a3 = document.getElementById('div_a3')
+
+let Animate = document.getElementById('Animate')
+
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+Animate.onclick = async function() {
+    for (let i = 0; i < Infinity; i += 1) {
+        div_a.style.marginLeft = '598px';
+        await wait(2000)
+        div_a.style.marginTop = '178px';
+        await wait(2000)
+        div_a.style.marginLeft = '891px';
+        await wait(2000)
+        div_a.style.display = 'none';
+        div_a1.style.display = 'block';
+        await wait(50)
+        div_a1.style.marginTop = '48px';
+        div_a2.style.display = 'block';
+        await wait(50)
+        div_a2.style.marginLeft = '1008px';
+        await wait(2000)
+        div_a1.style.marginLeft = '388px';
+        div_a2.style.marginTop = '48px';
+        await wait(2000)
+        div_a2.style.marginLeft = '1510px';
+        div_a1.style.marginTop = '273px';
+        await wait(2000)
+        div_a2.style.marginTop = '273px';
+        await wait(500)
+        div_a1.style.backgroundColor = 'blue';
+        div_a2.style.backgroundColor = 'blue';
+        await wait(2000)
+        div_a1.style.marginLeft = '891px';
+        div_a2.style.marginLeft = '1008px';
+        await wait(2000)
+        div_a1.style.marginTop = '326px';
+        div_a2.style.marginTop = '326px';
+        await wait(2000)
+        div_a1.style.marginLeft = '1008px';
+        await wait(2000)
+        div_a1.style.display = 'none';
+        div_a2.style.display = 'none';
+        await wait(50)
+        div_a3.style.display = 'block';
+        await wait(50)
+        div_a3.style.marginLeft = '1241px';
+        await wait(2000)
+        div_a3.style.marginTop = '631px';
+        await wait(2000)
+        div_a3.style.marginLeft = '896px';
+        await wait(2000)
+
+        div_a.style.display = 'none'
+        await wait(50)
+        div_a.style.marginLeft = '885px'
+        div_a.style.marginTop = '631px'
+        await wait(50)
+
+        div_a1.style.display = 'none'
+        await wait(50)
+        div_a1.style.marginLeft = '891px'
+        div_a1.style.marginTop = '178px'
+
+        div_a2.style.display = 'none'
+        await wait(50)
+        div_a2.style.marginLeft = '891px'
+        div_a2.style.marginTop = '178px'
+
+        div_a3.style.display = 'none'
+        await wait(50)
+        div_a3.style.marginLeft = '1008px'
+        div_a3.style.marginTop = '326px'
+
+
+        div_a.style.display = 'block'
+        await wait(50)
+
+
+        div_a.style.backgroundColor = 'red'
+        div_a1.style.backgroundColor = 'red'
+        div_a2.style.backgroundColor = 'red'
+        await wait(50)
+    }
+
+};
+

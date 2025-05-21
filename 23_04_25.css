@@ -1,0 +1,20 @@
+#div_a {
+    transition-property: margin-left, margin-top;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+#div_a1 {
+    transition-property: margin-left, margin-top;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+#div_a2 {
+    transition-property: margin-left, margin-top;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+#div_a3 {
+    transition-property: margin-left, margin-top;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
