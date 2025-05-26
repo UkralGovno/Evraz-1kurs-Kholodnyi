@@ -18,3 +18,11 @@
     transition-duration: 2s;
     transition-timing-function: linear;
 }
+#Animate {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+span {
+    border: 2px solid transparent;
+    border-radius: 6px;
+}
