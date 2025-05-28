@@ -5,6 +5,8 @@ let div_a3 = document.getElementById('div_a3')
 
 let Animate = document.getElementById('Animate')
 
+let status = 'off'
+
 function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
@@ -56,9 +58,9 @@ Animate.onclick = async function() {
         }
 
         function2()
+
         procent1.innerText = input2
         procent2.innerText = input3
-
 
         for (let i = 0; i < Infinity; i += 1) {
             div_a.style.marginLeft = '598px';
@@ -136,4 +138,54 @@ Animate.onclick = async function() {
             await wait(50)
         }
     }
+}
+
+function AnimateOnOff () {
+    let span_p1 = document.getElementById('span_p1')
+    let span_p2 = document.getElementById('span_p2')
+    let span_1 = document.getElementById('span1')
+    let span_2 = document.getElementById('span2')
+    let span_3 = document.getElementById('span3')
+    let span_6 = document.getElementById('span6')
+    let span_7 = document.getElementById('span7')
+
+    if (status === 'off') {
+        span_p1.innerText = '--'
+        span_p2.innerText = '--'
+        span_1.innerText = '--'
+        span_2.innerText = '--'
+        span_3.innerText = '--'
+        span_6.innerText = '--'
+        span_7.innerText = '--'
+    }
+    else {
+        span_p1.innerText = document.getElementById('input2').value
+        span_p2.innerText = document.getElementById('input3').value
+        span_1.innerText = document.getElementById('input1').value
+
+        let number1 = 0
+
+        const minTemp = 20
+
+        number1 = Number(span_1.innerText) - minTemp
+
+        span_2.innerText = (Number(span_1.innerText) * Number(number1) * 0.01 * 0.9) + minTemp
+        span_3.innerText = (Number(span_1.innerText) * Number(number1) * 0.01 * 0.8) + minTemp
+        let tempRoom1 = Number(span2.innerText)
+        let tempRoom2 = Number(span3.innerText)
+
+        span6.innerText = (tempRoom1 + tempRoom2) / 2
+
+
+
+        span_7.innerText = span_1.innerText
+    }
+
+    if (status === 'off') {
+        status = 'on'
+    }
+    else {
+        status = 'off'
+    }
+
 }
